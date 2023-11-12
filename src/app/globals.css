@@ -1,27 +1,262 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  /* COMECO SECAO 1  */
+  .secao1 {
+    background: url(../../public/img/banner.svg);
+    @apply bg-cover bg-no-repeat bg-right min-h-screen flex items-center;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .secao1 .container-secao1 {
+    /* width: 80vw; */
+    @apply w-[80vw] mx-auto flex flex-col h-96 justify-around;
+  }
+
+  .secao1 .titulo {
+    @apply w-[500px];
+  }
+
+  .secao1 .titulo h1 {
+    @apply text-black text-6xl text-left;
+  }
+
+  .secao1 .subtitulo {
+    @apply flex items-center text-black text-3xl font-bold;
+  }
+
+  /* .secao1 .subtitulo img {
+    @apply w-10;
+  } */
+
+  .secao1 .underscore {
+    @apply underline text-blue-500;
+  }
+
+  .secao1 .botao {
+    @apply py-4 px-4 bg-blue-500 rounded-md w-56 cursor-pointer text-center;
+    &:hover {
+      @apply bg-blue-400;
+    }
+  }
+
+  .secao1 .botao a {
+    @apply text-white font-bold no-underline;
+  }
+/* FIM SECAO 1  */
+
+
+
+  /* COMECO SECAO 2  */
+  .secao2 {
+    @apply flex flex-col justify-around h-[65vh] mx-auto;
+  }
+
+  .secao2 .texts {
+    @apply w-[400px] text-black;
+  }
+
+  .secao2 .texts h1 {
+    @apply text-[1.6rem] leading-9;
+  }
+
+  .secao2 .texts p {
+    @apply text-xl;
+  }
+
+  .secao2 .imagens {
+    @apply flex gap-x-16 overflow-x-scroll;
+  }
+
+  .secao2 .imagens div {
+    @apply w-[300px] shadow-md rounded-md ;
+    & img{
+      @apply w-full h-auto object-cover rounded-md;
+    }
+  }
+    /* FIM SECAO 2  */
+
+
+    /* COMECO SECAO 3  */
+    .secao3 {
+        @apply flex flex-col justify-between my-auto h-[70vh] w-full mx-auto text-white text-xl bg-blue-500;
+      }
+    
+      .secao3 .h1 {
+        @apply w-4/5 mx-auto;
+      }
+    
+      .secao3 details {
+        @apply w-4/5 mx-auto flex;
+      }
+    
+      .secao3 .duvidas {
+        @apply h-80 flex flex-col justify-between;
+      }
+    
+      .secao3 details summary {
+        @apply cursor-pointer;
+      }
+    
+      .secao3 details p {
+        @apply text-lg;
+      }
+      /* FIM SECAO 3  */
+
+    }
+
+
+/* MEDIA QUERIES */
+@media (max-width: 1199px) {
+  .secao1 .titulo {
+    @apply w-96;
+  }
+
+  .secao1 .titulo h1 {
+    @apply text-5xl;
+  }
+
+  .secao1 .subtitulo {
+    @apply text-xl;
+  }
+
+  .secao1 .subtitulo img {
+    @apply w-9;
+  }
+
+  .secao1 .botao {
+    @apply w-48;
+  }
+
+  .secao1 .container-secao1 {
+    @apply h-80;
+  }
+
+  .secao2 .imagens img {
+    @apply w-[232px];
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+@media (max-width: 991px) {
+
+  .secao1 .titulo {
+    @apply w-[350px];
+  }
+
+  .secao1 .titulo h1 {
+    @apply text-4xl;
+  }
+
+  .secao1 .subtitulo {
+    @apply text-base;
+  }
+
+  .secao1 .subtitulo img {
+    @apply w-8;
+  }
+
+  .secao1 .botao {
+    @apply w-52;
+  }
+
+  .secao1 .container-secao1 {
+    @apply h-[270px];
+  }
+
+  .secao2 .imagens img {
+    @apply w-52;
+  }
 }
+
+
+@media (max-width: 783px) {
+  .secao1 .titulo {
+    @apply w-[300px];
+  }
+
+  .secao1 .titulo h1 {
+    @apply text-3xl;
+  }
+
+  .secao1 .subtitulo {
+    @apply text-sm;
+  }
+
+  .secao1 .subtitulo img {
+    @apply w-6;
+  }
+
+  .secao1 .botao {
+    @apply w-52;
+  }
+
+  .secao1 .container-secao1 {
+    @apply h-56;
+  }
+
+  .secao2 .imagens img {
+    @apply w-36;
+  }
+
+  .secao2 .imagens {
+    @apply flex flex-wrap justify-center;
+  }
+
+  .secao2 {
+    @apply h-auto w-4/5;
+  }
+
+  .secao2 .texts h1 {
+    @apply text-2xl leading-8;
+  }
+
+  .secao2 .texts p {
+    @apply text-base;
+  }
+}
+
+@media  (max-width: 575px) {
+  .secao1 .titulo {
+    @apply w-[250px];
+  }
+
+  .secao1 .titulo h1 {
+    @apply text-xl;
+  }
+
+  .secao1 .subtitulo {
+    @apply text-[0.6rem];
+  }
+
+  .secao1 .subtitulo img {
+    @apply w-5;
+  }
+
+  .secao1 .botao {
+    @apply w-[200px];
+  }
+
+  .secao1 .container-secao1 {
+    @apply h-[150px];
+  }
+
+  .secao2 .imagens img {
+    @apply w-[100px];
+  }
+
+  .secao2 .imagens {
+    @apply flex flex-wrap justify-center;
+  }
+
+  .secao2 {
+    @apply h-auto w-4/5;
+  }
+}
+
+
+
+
+
+
