@@ -25,13 +25,16 @@ export default function FormCliente() {
 
     console.log(formData)
     // Faça algo com os dados, por exemplo, envie para um servidor
-    // const resposta = await fetch("http://localhost:8080/sprint4/cliente",{
-    //         method: "POST",
-    //         body: JSON.stringify(formData),
-    //     });
-
-    //     const resultado = await resposta.json();
-    //     console.log(resultado)
+    try{
+    const resposta = await fetch("http://localhost:8080/sprint4/cliente",{
+        method: "POST",
+        body: JSON.stringify(formData),
+    });
+    const resultado = await resposta.json();
+        console.log(resultado)
+    }catch(error){
+        console.log("erro ao enviar dados para o backend",error)
+    }
   };
 
   return (
