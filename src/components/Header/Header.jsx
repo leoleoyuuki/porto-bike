@@ -3,11 +3,14 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { HiMenu } from 'react-icons/hi'
 import {VscError} from 'react-icons/vsc'
-import logo from '../../../public/img/logo.svg';
+import logo from '../../../public/img/logo.png';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 
-const Header = () => {
+export default function Header() {
+
+  const url = usePathname();
   const [menuAberto, setMenuAberto] = useState(false);
 
   const toggleMenu = () => {
@@ -43,13 +46,16 @@ const Header = () => {
           </li>
           
         </ul>
+        <div className='invisible'>
+          <Image src={""} width={200} />
+        </div>
       </div>
       <div className={`menu-overlay ${menuAberto ? 'visible' : ''}`} onClick={toggleMenu}></div>
       <style jsx>{`
         header {
           width: 100%;
           margin: 0 auto;
-          position: absolute;
+          position: ${url == '/form-cliente' ?  'static' : 'absolute'};
         }
 
         .head {
@@ -89,14 +95,14 @@ const Header = () => {
         li p {
           list-style: none;
           font-size: 1.5rem;
-          color: #fff;
+          color: #000;
           font-weight: 500;
           text-decoration: none;
           z-index: 2;
         }
 
         .coberturas {
-          border: 1px solid #fff;
+          border: 1px solid #000;
           border-radius: 10px;
           padding: 0 10px;
           cursor: pointer;
@@ -262,4 +268,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+

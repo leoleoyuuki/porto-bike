@@ -10,7 +10,7 @@ export default function Home() {
             <h1>Pedale mais tranquilo com a segurança Porto</h1>
           </div>
           <div className="subtitulo">
-            <Image src="/img/cadeado.svg" width={50} height={50} alt='cadeado'/>
+            <Image src="/img/cadeado.png" width={50} height={50} alt='cadeado'/>
             <p>
               Porto Seguro <span className="underscore">Bike</span>
             </p>
@@ -32,41 +32,37 @@ export default function Home() {
         </div>
         <div className="imagens">
         <div>
-            <Image src="/img/danosbike.png" width={548} height={402} alt="Danos á Bike" />
+            <Image src="/img/danosbike.png" width={508} height={370} alt="Danos á Bike" />
           </div>
 
           <div>
-            <Image src="/img/roubo.png" width={548} height={402} alt="Roubo" />
+            <Image src="/img/roubo.png" width={508} height={370} alt="Roubo" />
           </div>
 
           <div>
-            <Image src="/img/acidentespessoais.png" width={548} height={402} alt="Acidentes pessoais" />
+            <Image src="/img/acidentespessoais.png" width={508} height={370} alt="Acidentes pessoais" />
           </div>
 
           <div>
-            <Image src="/img/danosaterceiros.png" width={548} height={402} alt="Danos a terceiros" />
+            <Image src="/img/danosaterceiros.png" width={508} height={370} alt="Danos a terceiros" />
           </div>
 
           <div>
-            <Image src="/img/extensaointernacional.png" width={548} height={402} alt="Extensão da cobertura em solo internacional" />
+            <Image src="/img/extensaointernacional.png" width={508} height={370} alt="Extensão da cobertura em solo internacional" />
           </div>
 
           <div>
-            <Image src="/img/extravioemviagens.png" width={548} height={402} alt="Extravio em viagens aéreas e/ou rodovias " />
+            <Image src="/img/extravioemviagens.png" width={508} height={370} alt="Extravio em viagens aéreas e/ou rodovias " />
           </div>
 
           <div>
-            <Image src="/img/danosportransporte.png" width={548} height={402} alt="Danos Pelo transporte da bike " />
+            <Image src="/img/danosnatentativaderoubo.png" width={508} height={370} alt="Danos Na tentativa de roubo" />
           </div>
-
           <div>
-            <Image src="/img/danosnatentativaderoubo.png" width={548} height={402} alt="Danos Na tentativa de roubo" />
-          </div>
-          
-          <div>
-            <Image src="/img/danoscurtocircuito.png" width={548} height={402} alt="Danos Causados por curto circuito na bateria de bikes elétricas" />
+            <Image src="/img/danosporcurtos.png" width={508} height={370} alt="Danos Causados por curto circuito na bateria de bikes elétricas" />
           </div>
         </div>
+        
       </section>
       
       {/* inciando o FAQ */}

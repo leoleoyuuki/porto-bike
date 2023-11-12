@@ -50,7 +50,7 @@
 
   /* COMECO SECAO 2  */
   .secao2 {
-    @apply flex flex-col justify-around h-[65vh] mx-auto;
+    @apply overflow-x-scroll flex flex-col justify-around h-[65vh] w-4/5 mx-auto;
   }
 
   .secao2 .texts {
@@ -58,7 +58,7 @@
   }
 
   .secao2 .texts h1 {
-    @apply text-[1.6rem] leading-9;
+    @apply text-[1.6rem] font-bold leading-9;
   }
 
   .secao2 .texts p {
@@ -66,25 +66,18 @@
   }
 
   .secao2 .imagens {
-    @apply flex gap-x-16 overflow-x-scroll;
-  }
-
-  .secao2 .imagens div {
-    @apply w-[300px] shadow-md rounded-md ;
-    & img{
-      @apply w-full h-auto object-cover rounded-md;
-    }
+    @apply w-max gap-x-10 flex flex-row justify-evenly;
   }
     /* FIM SECAO 2  */
 
 
     /* COMECO SECAO 3  */
     .secao3 {
-        @apply flex flex-col justify-between my-auto h-[70vh] w-full mx-auto text-white text-xl bg-blue-500;
+        @apply flex flex-col justify-around my-auto h-[70vh] w-full mx-auto text-white text-xl bg-blue-500;
       }
     
       .secao3 .h1 {
-        @apply w-4/5 mx-auto;
+        @apply w-4/5 mx-auto text-4xl font-bold;
       }
     
       .secao3 details {
@@ -105,6 +98,56 @@
       /* FIM SECAO 3  */
 
     }
+
+    /* FOOTER */
+    .footer {
+      @apply w-4/5 mx-auto flex flex-col h-[200px] justify-around items-center;
+    }
+  
+    .footer hr {
+      @apply w-[40vw] mx-auto;
+    }
+  
+    .footer p {
+      @apply text-black;
+    }
+  
+    .footer nav {
+      @apply flex justify-between w-auto gap-5 mx-auto ;
+    }
+  
+    .footer nav p {
+      @apply text-blue-500 text-sm;
+    }
+
+
+
+/* FORM-CLIENTE */
+
+.container-form {
+  @apply mt-20 w-3/5 mx-auto flex flex-row h-[60vh] items-center bg-[#009EE2] rounded-[30px];
+}
+.left{
+  @apply flex flex-col justify-center w-1/3 h-full bg-[#d9d9d9] rounded-tl-[30px] rounded-bl-[30px] ;
+
+  & .left-container{
+    @apply flex flex-col justify-around h-3/5 w-4/6 mx-auto ;
+  }
+}
+.right{
+  @apply w-2/3 h-full flex flex-col justify-around rounded-[30px];
+}
+
+.form{
+  & input{
+    @apply w-[25vw] rounded h-[40px] ;
+  }
+}
+
+
+
+
+
 
 
 /* MEDIA QUERIES */
