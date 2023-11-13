@@ -35,6 +35,7 @@ export default function FormCliente() {
     const resultado = await resposta.json();
         console.log(resultado)
         console.log(resposta.status)
+        window.location.href = "/"
         
     }catch(error){
         console.log("erro ao enviar dados para o backend",error)
