@@ -36,7 +36,6 @@ export default function FormCliente() {
         
     }catch(error){
         console.log("erro ao enviar dados para o backend",error)
-        window.location.href = "/form-bike";
     }
   };
 
