@@ -32,8 +32,11 @@ export default function FormCliente() {
     });
     const resultado = await resposta.json();
         console.log(resultado)
+        console.log(resposta.status)
+        
     }catch(error){
         console.log("erro ao enviar dados para o backend",error)
+        window.location.href = "/form-bike";
     }
   };
 

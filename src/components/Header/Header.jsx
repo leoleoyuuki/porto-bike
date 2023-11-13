@@ -55,7 +55,7 @@ export default function Header() {
         header {
           width: 100%;
           margin: 0 auto;
-          position: ${url == '/form-cliente' ?  'static' : 'absolute'};
+          position: ${url == '/form-cliente' || url == '/form-bike' ?  'static' : 'absolute'};
         }
 
         .head {
